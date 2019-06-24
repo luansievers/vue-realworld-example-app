@@ -12,7 +12,7 @@
       >
         {{ article.author.username }}
       </router-link>
-      <span class="date">{{ article.createdAt | date }}</span>
+      <span class="date">{{ $d(new Date(article.createdAt), "short") }}</span>
     </div>
     <template v-if="actions">
       <rwv-article-actions
