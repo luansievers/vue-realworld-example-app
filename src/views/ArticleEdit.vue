@@ -11,7 +11,7 @@
                   type="text"
                   class="form-control form-control-lg"
                   v-model="article.title"
-                  placeholder="Article Title"
+                  :placeholder="$t('article_title')"
                 />
               </fieldset>
               <fieldset class="form-group">
@@ -19,7 +19,7 @@
                   type="text"
                   class="form-control"
                   v-model="article.description"
-                  placeholder="What's this article about?"
+                  :placeholder="$t('article_description')"
                 />
               </fieldset>
               <fieldset class="form-group">
@@ -27,7 +27,7 @@
                   class="form-control"
                   rows="8"
                   v-model="article.body"
-                  placeholder="Write your article (in markdown)"
+                  :placeholder="$t('write_article')"
                 >
                 </textarea>
               </fieldset>
@@ -35,7 +35,7 @@
                 <input
                   type="text"
                   class="form-control"
-                  placeholder="Enter tags"
+                  :placeholder="$t('enter_tags')"
                   v-model="tagInput"
                   v-on:keypress.enter.prevent="addTag(tagInput)"
                 />
@@ -56,7 +56,7 @@
               class="btn btn-lg pull-xs-right btn-primary"
               type="submit"
             >
-              Publish Article
+              {{ $t("publish_article") }}
             </button>
           </form>
         </div>

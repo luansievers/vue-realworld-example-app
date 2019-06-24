@@ -3,7 +3,7 @@
     <div class="container page">
       <div class="row">
         <div class="col-md-6 offset-md-3 col-xs-12">
-          <h1 class="text-xs-center">Your Settings</h1>
+          <h1 class="text-xs-center">{{ $t("your_settings") }}</h1>
           <form @submit.prevent="updateSettings()">
             <fieldset>
               <fieldset class="form-group">
@@ -11,7 +11,7 @@
                   class="form-control"
                   type="text"
                   v-model="currentUser.image"
-                  placeholder="URL of profile picture"
+                  :placeholder="$t('url_profile_picture')"
                 />
               </fieldset>
               <fieldset class="form-group">
@@ -19,7 +19,7 @@
                   class="form-control form-control-lg"
                   type="text"
                   v-model="currentUser.username"
-                  placeholder="Your username"
+                  :placeholder="$t('your_username')"
                 />
               </fieldset>
               <fieldset class="form-group">
@@ -27,7 +27,7 @@
                   class="form-control form-control-lg"
                   rows="8"
                   v-model="currentUser.bio"
-                  placeholder="Short bio about you"
+                  :placeholder="$t('short_bio')"
                 ></textarea>
               </fieldset>
               <fieldset class="form-group">
@@ -35,7 +35,7 @@
                   class="form-control form-control-lg"
                   type="text"
                   v-model="currentUser.email"
-                  placeholder="Email"
+                  :placeholder="$t('email')"
                 />
               </fieldset>
               <fieldset class="form-group">
@@ -43,18 +43,18 @@
                   class="form-control form-control-lg"
                   type="password"
                   v-model="currentUser.password"
-                  placeholder="Password"
+                  :placeholder="$t('password')"
                 />
               </fieldset>
               <button class="btn btn-lg btn-primary pull-xs-right">
-                Update Settings
+                {{ $t("update_settings") }}
               </button>
             </fieldset>
           </form>
           <!-- Line break for logout button -->
           <hr />
           <button @click="logout" class="btn btn-outline-danger">
-            Or click here to logout.
+            {{ $t("click_logout") }}
           </button>
         </div>
       </div>

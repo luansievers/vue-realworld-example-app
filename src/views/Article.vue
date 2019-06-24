@@ -33,10 +33,14 @@
           >
           </RwvCommentEditor>
           <p v-else>
-            <router-link :to="{ name: 'login' }">Sign in</router-link>
-            or
-            <router-link :to="{ name: 'register' }">sign up</router-link>
-            to add comments on this article.
+            <router-link :to="{ name: 'login' }">{{
+              $t("sign_in")
+            }}</router-link>
+            {{ $t("or") }}
+            <router-link :to="{ name: 'register' }">{{
+              $t("sign_up")
+            }}</router-link>
+            {{ $t("add_coments_article") }}
           </p>
           <RwvComment
             v-for="(comment, index) in comments"

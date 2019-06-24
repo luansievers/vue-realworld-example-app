@@ -3,10 +3,10 @@
     <div class="container page">
       <div class="row">
         <div class="col-md-6 offset-md-3 col-xs-12">
-          <h1 class="text-xs-center">Sign up</h1>
+          <h1 class="text-xs-center">{{ $t("sign_up") }}</h1>
           <p class="text-xs-center">
             <router-link :to="{ name: 'login' }">
-              Have an account?
+              {{ $t("have_account") }}
             </router-link>
           </p>
           <ul v-if="errors" class="error-messages">
@@ -18,7 +18,7 @@
                 class="form-control form-control-lg"
                 type="text"
                 v-model="username"
-                placeholder="Username"
+                :placeholder="$t('username')"
               />
             </fieldset>
             <fieldset class="form-group">
@@ -26,7 +26,7 @@
                 class="form-control form-control-lg"
                 type="text"
                 v-model="email"
-                placeholder="Email"
+                :placeholder="$t('email')"
               />
             </fieldset>
             <fieldset class="form-group">
@@ -34,11 +34,11 @@
                 class="form-control form-control-lg"
                 type="password"
                 v-model="password"
-                placeholder="Password"
+                :placeholder="$t('password')"
               />
             </fieldset>
             <button class="btn btn-lg btn-primary pull-xs-right">
-              Sign up
+              {{ $t("sign_up") }}
             </button>
           </form>
         </div>

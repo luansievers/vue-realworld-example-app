@@ -8,6 +8,7 @@ import { CHECK_AUTH } from "./store/actions.type";
 import ApiService from "./common/api.service";
 import DateFilter from "./common/date.filter";
 import ErrorFilter from "./common/error.filter";
+import i18n from "./i18n";
 
 Vue.config.productionTip = false;
 Vue.filter("date", DateFilter);
@@ -23,5 +24,6 @@ router.beforeEach((to, from, next) =>
 new Vue({
   router,
   store,
+  i18n,
   render: h => h(App)
 }).$mount("#app");

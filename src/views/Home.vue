@@ -3,7 +3,7 @@
     <div class="banner">
       <div class="container">
         <h1 class="logo-font">conduit</h1>
-        <p>A place to share your knowledge.</p>
+        <p>{{ $t("share_knowledge") }}</p>
       </div>
     </div>
     <div class="container page">
@@ -17,7 +17,7 @@
                   class="nav-link"
                   active-class="active"
                 >
-                  Your Feed
+                  {{ $t("your_feed") }}
                 </router-link>
               </li>
               <li class="nav-item">
@@ -27,7 +27,7 @@
                   class="nav-link"
                   active-class="active"
                 >
-                  Global Feed
+                  {{ $t("global_feed") }}
                 </router-link>
               </li>
               <li class="nav-item" v-if="tag">
@@ -45,7 +45,7 @@
         </div>
         <div class="col-md-3">
           <div class="sidebar">
-            <p>Popular Tags</p>
+            <p>{{ $t("popular_tags") }}</p>
             <div class="tag-list">
               <RwvTag v-for="(tag, index) in tags" :name="tag" :key="index">
               </RwvTag>

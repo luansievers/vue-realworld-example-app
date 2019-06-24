@@ -12,7 +12,7 @@
                 class="btn btn-sm btn-outline-secondary action-btn"
                 :to="{ name: 'settings' }"
               >
-                <i class="ion-gear-a"></i> Edit Profile Settings
+                <i class="ion-gear-a"></i> {{ $t("edit_profile_settings") }}
               </router-link>
             </div>
             <div v-else>
@@ -21,7 +21,7 @@
                 v-if="profile.following"
                 @click.prevent="unfollow()"
               >
-                <i class="ion-plus-round"></i> &nbsp;Unfollow
+                <i class="ion-plus-round"></i> &nbsp;{{ $t("unfollow") }}
                 {{ profile.username }}
               </button>
               <button
@@ -29,7 +29,7 @@
                 v-if="!profile.following"
                 @click.prevent="follow()"
               >
-                <i class="ion-plus-round"></i> &nbsp;Follow
+                <i class="ion-plus-round"></i> &nbsp;{{ $t("follow") }}
                 {{ profile.username }}
               </button>
             </div>
@@ -50,7 +50,7 @@
                   exact
                   :to="{ name: 'profile' }"
                 >
-                  My Articles
+                  {{ $t("my_articles") }}
                 </router-link>
               </li>
               <li class="nav-item">
@@ -60,7 +60,7 @@
                   exact
                   :to="{ name: 'profile-favorites' }"
                 >
-                  Favorited Articles
+                  {{ $t("favorited_articles") }}
                 </router-link>
               </li>
             </ul>
